@@ -1,0 +1,37 @@
+{
+  "name": "todos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "json": "concurrently \"npx json-server src/data/data.json --static src/data/img -p 3001\" \"(if exist .next rd /s /q .next 2>nul) && next dev\" "
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.4.8",
+    "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.11.9",
+    "json-server": "^1.0.0-beta.3",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.1",
+    "react-redux": "^9.1.2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^9.0.1",
+    "postcss": "^8",
+    "redux-thunk": "^3.1.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

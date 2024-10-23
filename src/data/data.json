@@ -1,0 +1,128 @@
+{
+  "products": [
+    {
+      "id": "12345",
+      "name": "Smartphone X10 Pro",
+      "category": {
+        "id": "electronics",
+        "name": "Электроника"
+      },
+      "images": [
+        "http://localhost:3001/x-10.png"
+      ],
+      "price": {
+        "amount": 899.9,
+        "currency": "USD",
+        "discount": {
+          "percent": 10,
+          "validUntil": "2024-12-31"
+        }
+      },
+      "availability": {
+        "status": "in_stock",
+        "quantity": 120
+      },
+      "manufacturer": {
+        "name": "TechCorp",
+        "country": "Japan",
+        "warranty": {
+          "duration": "2 years",
+          "service": "Global"
+        }
+      },
+      "features": [
+        {
+          "name": "Дисплей",
+          "description": "6.7-дюймовый AMOLED дисплей с разрешением 3200x1440"
+        },
+        {
+          "name": "Процессор",
+          "description": "8-ядерный процессор с тактовой частотой 3.0 ГГц"
+        },
+        {
+          "name": "Камера",
+          "description": "Основная камера 108 МП + фронтальная 32 МП"
+        },
+        {
+          "name": "Батарея",
+          "description": "Емкость 5000 мАч, быстрая зарядка 65 Вт"
+        },
+        {
+          "name": "ОЗУ",
+          "description": "12 Gb"
+        }
+      ],
+      "shipping": {
+        "weight": "210g",
+        "dimensions": {
+          "width": "75mm",
+          "height": "160mm",
+          "depth": "8mm"
+        },
+        "origin": "Japan"
+      },
+      "reviews": [
+        {
+          "user": "ivanov123",
+          "rating": 5,
+          "comment": "Отличный смартфон с мощной камерой!",
+          "date": "2024-10-10"
+        },
+        {
+          "user": "petrova456",
+          "rating": 4,
+          "comment": "Быстрая зарядка и яркий экран, но немного тяжеловат.",
+          "date": "2024-10-11"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Электроника"
+    },
+    {
+      "id": "fashion",
+      "name": "Мода"
+    },
+    {
+      "id": "home_appliances",
+      "name": "Бытовая техника"
+    },
+    {
+      "id": "sports",
+      "name": "Спорт и активный отдых"
+    },
+    {
+      "id": "beauty",
+      "name": "Красота и здоровье"
+    },
+    {
+      "id": "toys",
+      "name": "Игрушки и игры"
+    }
+  ],
+  "availabilityStatuses": [
+    {
+      "id": "in_stock",
+      "name": "В наличии"
+    },
+    {
+      "id": "out_of_stock",
+      "name": "Нет в наличии"
+    },
+    {
+      "id": "pre_order",
+      "name": "Предзаказ"
+    },
+    {
+      "id": "discontinued",
+      "name": "Снят с производства"
+    },
+    {
+      "id": "limited_stock",
+      "name": "Ограниченное количество"
+    }
+  ]
+}
