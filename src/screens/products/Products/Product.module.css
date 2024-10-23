@@ -2,4 +2,10 @@
     & {
         @apply px-5 py-2 w-1/3 border-b border-gray-500;
     }
+
+    /*& > label {*/
+    /*    &[data-selected="true"] {*/
+    /*        @apply line-through font-light;*/
+    /*    }*/
+    /*}*/
 }
