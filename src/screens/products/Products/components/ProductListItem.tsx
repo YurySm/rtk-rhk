@@ -3,9 +3,12 @@ import {IProduct, IReview} from "@/interfaces/product.interface";
 import {Button, Chip} from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import StarIcon from '@/icons/star.svg'
+import {Rating} from "@smastrom/react-rating";
+import '@smastrom/react-rating/style.css'
+import {getReviewWord} from "@/utils/getReviewWord";
 
 export function ProductListItem ({product}: {product: IProduct}) {
-
     return (
         <div className={'grid grid-cols-[250px_1fr_auto] gap-3 border rounded p-8 items-center mt-8'}>
             <div className={'h-48 rounded-md overflow-hidden relative'}>
@@ -18,7 +21,15 @@ export function ProductListItem ({product}: {product: IProduct}) {
 
             <div className={'self-start'}>
                 <h2 className={'text-3xl'}>{product.name}</h2>
-                <div className={'mt-3'}>{getRatingValue(product.reviews)} - {product.reviews.length} отзывов</div>
+                <div className={'mt-3 flex gap-2'}>
+                    <Rating
+                        className={'max-w-28'}
+                        value={getRatingValue(product.reviews)}
+                        readOnly
+                    />
+                    <span>{product.reviews.length} {getReviewWord(product.reviews.length)}</span>
+                </div>
+
                 {
                     product.price.discount ?
                         <div className={'mt-7'}>

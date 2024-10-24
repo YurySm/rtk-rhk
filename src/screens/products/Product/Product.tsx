@@ -7,6 +7,8 @@ import {Link} from "@nextui-org/react";
 import {EditProduct} from "@/screens/products/Product/EditProduct/EditProduct";
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
+import {Rating} from "@smastrom/react-rating";
+import {getReviewWord} from "@/utils/getReviewWord";
 
 export function Product ({id}: {id: string}) {
     const {
@@ -56,9 +58,14 @@ export function Product ({id}: {id: string}) {
                                     }
                                     <EditProduct product={product}/>
                                 </div>
-                                <div
-                                    className={'mt-3'}>{getRatingValue(product.reviews)} - <Link
-                                    href={'#reviews'}>{product.reviews.length} отзывов</Link>
+
+                                <div className={'mt-3 flex gap-2'}>
+                                    <Rating
+                                        className={'max-w-28'}
+                                        value={getRatingValue(product.reviews)}
+                                        readOnly
+                                    />
+                                    <span>{product.reviews.length} {getReviewWord(product.reviews.length)}</span>
                                 </div>
 
                                 <h2 className={'text-2xl font-medium mt-7'}>Характеристики:</h2>
@@ -103,9 +110,12 @@ export function Product ({id}: {id: string}) {
                                         <p className={'text-sm font-light text-gray-400'}>
                                             {format(review.date, 'd MMMM yyyy', { locale: ru })}
                                         </p>
-                                        <div>
-                                            {review.rating}
-                                        </div>
+
+                                        <Rating
+                                            className={'max-w-28 mt-2'}
+                                            value={review.rating}
+                                            readOnly
+                                        />
 
                                         <p className={'mt-6 text-gray-300'}>
                                             {review.comment}
